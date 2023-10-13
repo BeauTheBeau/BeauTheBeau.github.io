@@ -127,7 +127,10 @@ const handleOnMove = e => {
     letter.style.setProperty("--y", `${y}px`);
 
     letter.innerText = randomString(1500);
-    console.log(letter.innerText);
 }
 
-cards.forEach(card => { card.addEventListener("mousemove", handleOnMove); } );
+// If a CARD has an element with the class "card-letters", add an event listener to it
+document.querySelectorAll(".card").forEach(card => {
+    const letters = card.querySelector(".card-letters");
+    if (letters) card.addEventListener("mousemove", handleOnMove);
+});
