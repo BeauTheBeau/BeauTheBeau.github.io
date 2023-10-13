@@ -63,18 +63,31 @@
         </a>
     </div>
     <div class="card">
-        <!-- An analogue clock, updated every second, using the current time in the United Kingdom -->
-        <h2>Time</h2>
+        <!-- An digital clock, updated every second, using the current time in the United Kingdom -->
+        <h3 id="theclock"><span id="hours"><script>document.write(new Date().getHours())</script></span>:<span id="minutes"><script>document.write(new Date().getMinutes())</script></span></h3>
+        <p>here in the UK</p>
 
-        <div class="clock">
+        <script>
+            function updateTime() {
+                const date = new Date();
+                const hours = String(date.getHours()).padStart(2, '0');
+                const minutes = String(date.getMinutes()).padStart(2, '0');
 
-            <div class="clock-face">
-                <div class="hand hour-hand"></div>
-                <div class="hand min-hand"></div>
-                <div class="hand second-hand"></div>
-            </div>
-            <div class="clock-center"></div>
-        </div>
+                const times = { morning: 6, afternoon: 12, evening: 18, night: 0 };
+                let timeOfDay = "afternoon";
+                if (hours >= times.morning && hours < times.afternoon) timeOfDay = "morning";
+                else if (hours >= times.afternoon && hours < times.evening) timeOfDay = "afternoon";
+                else if (hours >= times.evening || hours < times.morning) timeOfDay = "evening";
+                document.getElementById("time").classList.add(timeOfDay);
+
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+            }
+
+            setInterval(updateTime, 1000);
+
+        </script>
+
     </div>
     <div class="card">
         <h2>Location</h2>
