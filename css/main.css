@@ -1,240 +1,155 @@
-:root {
-  --primary-color: 31, 31, 31;
-  --secondary-color: 40, 41, 42;
-  --secondary-hover-color: 2, 73, 118;
-  --secondary-active-color: 0, 64, 128;
-  --tertiary-color: 45, 47, 49;
-  --text: 255, 255, 255;
-}
-
-body.dark {
-  --primary-color: 31, 31, 31;
-  --secondary-color: 40, 41, 42;
-  --secondary-hover-color: 2, 73, 118;
-  --secondary-active-color: 0, 64, 128;
-  --tertiary-color: 45, 47, 49;
-  --text: 255, 255, 255;
-}
-body.light {
-  --primary-color: 253, 253, 253;
-  --secondary-color: 246, 248, 251;
-  --secondary-hover-color: 192, 229, 253;
-  --secondary-active-color: 135, 212, 255;
-  --tertiary-color: 241, 244, 250;
-  --text: 0, 0, 0;
-}
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: rgb(var(--text));
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-body,
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: rgb(var(--primary-color));
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
 }
 
-.hello {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 600;
-  margin-bottom: 0.5em;
-}
-.hello .wave {
-  animation: wave 1s infinite;
-}
-.hello h2 {
-  font-size: 1.5em;
-  margin-right: 0.5em;
-}
-.hello h1 {
-  font-size: 2em;
-}
-@media (max-width: 768px) {
-  .hello {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+body, html {
+    height: 100%;
+    width: 100%;
 }
 
-.skill {
-  cursor: default;
-}
-
-.swiper {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 1em;
-  overflow: hidden;
-}
-.swiper .swiper-slide {
-  background-color: rgb(var(--primary-color));
-  border-radius: 1em;
-  overflow: hidden;
-}
-
-.project {
-  border-radius: 1em;
-  margin: 1em auto;
-}
-.project .project__info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.project .project__info h3 {
-  font-size: 1.5em;
-}
-.project .project__info p {
-  font-size: 1em;
-  margin-bottom: 0.5em;
-}
-.project .project__info .project__links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 0.5em 0;
-}
-.project .project__info .project__links a {
-  background-color: rgb(var(--secondary-color));
-  padding: 0.5em;
-  border-radius: 0.5em;
-  text-decoration: none;
-  color: rgb(var(--text));
-  margin: 0 0.5em;
-  border: 1px solid rgb(var(--secondary-color));
-  transition: all 0.2s ease-in-out;
-}
-.project .project__info .project__links a:hover {
-  background-color: rgb(var(--secondary-hover-color));
-}
-.project .project__info .project__links a:active {
-  background-color: rgb(var(--secondary-active-color));
-  border: 1px solid rgb(var(--secondary-hover-color));
-}
-.project .project__image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  aspect-ratio: 16/9;
-  filter: blur(0.5em) brightness(0.5);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-}
-.project .project__image:hover {
-  filter: blur(0) brightness(1);
-}
 
 main {
-  width: 100%;
-  max-width: 768px;
-  margin: 1em auto;
+
+    min-height: calc(100% - 4em);
+    max-width: 768px;
+    margin: 1em auto;
+    padding: 1em;
+
+    border-radius: 2em;
+    overflow: hidden;
+    background-color: #fff;
+
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        "profile  profile   twitter"
+        "about    about     github"
+        "about    about     discord"
+
+        "time     location  location"
+
+        "skills   skills    projects"
+        "skills   skills    projects"
+        "skills   skills    projects"
+
+        "contact  contact   contact"
+        "contact  contact   contact";
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-section {
-  background-color: rgb(var(--secondary-color));
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 1em;
-  margin: 1em auto;
-  padding: 1em;
-}
-section .subsection {
-  margin: 1em 0;
-}
-section h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-section p {
-  font-size: 1em;
-  margin-bottom: 0.5em;
-}
-section h3 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-section ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-section li {
-  margin: 0.5em;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  background-color: rgb(var(--tertiary-color));
-  border: 1px solid rgba(255, 255, 255, 0);
-  transition: all 0.2s ease-in-out;
-}
-section li:hover {
-  background-color: rgb(var(--secondary-hover-color));
-}
-section li:active {
-  background-color: rgb(var(--secondary-active-color));
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-section li a {
-  text-decoration: none;
-  color: rgb(var(--text));
-}
-@media (max-width: 768px) {
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.card {
+    position: relative;
+
+    background-color: #1c1c1c;
+    color: #fff;
+
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 1em;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    background-size: 125% auto;
+    background-position: center;
+
+    & h2 {
+        background-color: white;
+        color: black;
+        padding: 0.15em 0.5em;
+        border-radius: 0.5em;
+        width: fit-content;
+    }
+
+    &:hover, &:focus-within {
+        transform: scale(1.05);
+        background-size: 100% auto;
+    }
+
+    :not(.card-letters) {
+        z-index: 1;
+    }
+
 }
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.profile {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://avatars.githubusercontent.com/u/90942493?v=4");
+    background-size: 125% auto;
+    background-position: center;
 }
 
-/*# sourceMappingURL=main.css.map */
+.github, .discord, .time, .twitter {
+    aspect-ratio: 1;
+    a {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25em;
+
+        position: absolute;
+        right: 0.25em;
+        bottom: 0.25em;
+        color: black;
+        background-color: #fff;
+        padding: 0.5em 1em;
+        border-radius: 2em 2em 2em 2em;
+        text-decoration: none;
+        transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        &:hover, &:focus {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+.location {
+    background: url("../images/london.png");
+    background-size: 125% auto;
+    background-position: center;
+}
+
+.card-letters {
+    --x: 0px;
+    --y: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 200%;
+    width: 200%;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 400ms;
+    -webkit-mask-image: radial-gradient(
+            calc(var(--x) * 1px) calc(var(--y) * 1px) at var(--x) var(--y),
+            rgb(255 255 255) 20%,
+            rgb(255 255 255 / 25%),
+            transparent
+    );
+    scale: 1.05;
+    filter: blur(1px);
+}
+
+.card:hover, .card:focus-within {
+    .card-letters {
+        opacity: 0.25;
+        pointer-events: none;
+
+    }
+}
