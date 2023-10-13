@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -55,7 +55,7 @@ main {
     position: relative;
 
     background-color: #1c1c1c;
-    color: #fff;
+    color: #e0e0e0;
 
     border-radius: 1em;
     overflow: hidden;
@@ -130,7 +130,7 @@ main {
     top: 0px;
     height: 200%;
     width: 200%;
-    color: white;
+    color: #a4a4a4;
     font-size: 1.5em;
     font-weight: 500;
     word-wrap: break-word;
@@ -150,37 +150,8 @@ main {
     .card-letters {
         opacity: 0.25;
         pointer-events: none;
-
     }
 }
-
-/*
-    <div class="card">
-        <!-- An digital clock, updated every second, using the current time in the United Kingdom -->
-        <h2>Time</h2>
-        <h3 id="time"><span id="hours"></span>:<span id="minutes"></span></h3>
-        <p>here in the UK</p>
-
-        <script>
-            function updateTime() {
-                let
-                    date = new Date(),
-                    hours = date.getHours(), minutes = date.getMinutes(), seconds = date.getSeconds();
-
-                if (hours < 10) hours = "0" + hours;
-                if (minutes < 10) minutes = "0" + minutes;
-                if (seconds < 10) seconds = "0" + seconds;
-
-                document.getElementById("hours").innerHTML = hours.toString();
-                document.getElementById("minutes").innerHTML = minutes.toString();
-                document.getElementById("seconds").innerHTML = seconds.toString();
-            }
-
-            setInterval(updateTime, 1000);
-        </script>
-
-    </div>
- */
 
 #time {
     display: flex;
@@ -212,11 +183,6 @@ main {
     &.night {
         background: linear-gradient(18deg, #000000, #191970);
     }
-
-
-
-
-
 }
 
 #theclock {
@@ -226,7 +192,16 @@ main {
     margin: 0;
     padding: 0;
     transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
+a {
+    text-decoration: none;
+    color: rgba(196, 196, 196, 0.82);
+    font-weight: 700;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 
-
+    &:hover, &:focus {
+        color: #fff;
+        filter: brightness(1.25);
+    }
 }
