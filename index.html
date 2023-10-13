@@ -64,7 +64,8 @@
     </div>
     <div class="card">
         <!-- An digital clock, updated every second, using the current time in the United Kingdom -->
-        <h3 id="theclock"><span id="hours"><script>document.write(new Date().getHours())</script></span>:<span id="minutes"><script>document.write(new Date().getMinutes())</script></span></h3>
+        <h3 id="theclock"><span id="hours"><script>document.write(new Date().getHours())</script></span>:<span
+                id="minutes"><script>document.write(new Date().getMinutes())</script></span></h3>
         <p>here in the UK</p>
 
         <script>
@@ -73,7 +74,7 @@
                 const hours = String(date.getHours()).padStart(2, '0');
                 const minutes = String(date.getMinutes()).padStart(2, '0');
 
-                const times = { morning: 6, afternoon: 12, evening: 18, night: 0 };
+                const times = {morning: 6, afternoon: 12, evening: 18, night: 0};
                 let timeOfDay = "afternoon";
                 if (hours >= times.morning && hours < times.afternoon) timeOfDay = "morning";
                 else if (hours >= times.afternoon && hours < times.evening) timeOfDay = "afternoon";
@@ -93,7 +94,131 @@
         <h2>Location</h2>
         <p>London, UK</p>
     </div>
-    <div class="card"></div>
+    <div class="card">
+
+        <h2>Technologies</h2>
+        <p>The technologies I use the most and am most familiar with</p>
+        <br>
+
+        <div class="tech__grid">
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-language_html5"></i>
+                <p>HTML</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-language_css3"></i>
+                <p>CSS</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-language_javascript"></i>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-language_typescript"></i>
+                <p>TypeScript</p>
+            </div>
+
+            <!---->
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-react"></i>
+                <p>React</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-vuejs"></i>
+                <p>Vue</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-angular"></i>
+                <p>Angular</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-seti-svelte"></i>
+                <p>Svelte</p>
+            </div>
+
+            <!---->
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-nodejs"></i>
+                <p>Node</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-language_python"></i>
+                <p>Python</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-oct-device_desktop"></i>
+                <p>Figma</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-git"></i>
+                <p>Git</p>
+            </div>
+
+            <!---->
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-firebase"></i>
+                <p>Firebase</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-dev-mongodb"></i>
+                <p>MongoDB</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-google_cloud"></i>
+                <p>Google Cloud</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-aws"></i>
+                <p>AWS</p>
+            </div>
+
+            <!---->
+
+            <div class="tech__grid__item">
+                <i class="nf nf-dev-linux"></i>
+                <p>Linux</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-fa-gears"></i>
+                <p>HUGO</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-docker"></i>
+                <p>Docker</p>
+            </div>
+
+            <div class="tech__grid__item">
+                <i class="nf nf-md-api"></i>
+                <p>Express</p>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
     <div class="card"></div>
     <div class="card"></div>
 

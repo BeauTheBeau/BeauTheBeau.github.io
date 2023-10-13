@@ -161,8 +161,7 @@ main {
 
     & p {
         font-size: 0.75em;
-        font-weight: 500;
-        opacity: 0.75;
+        font-weight: 700;
     }
 
     &.morning {
@@ -184,11 +183,6 @@ main {
         background: linear-gradient(18deg, #000000, #191970);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
-
-
-
-
-
 }
 
 #theclock {
@@ -210,4 +204,31 @@ a {
         color: #fff;
         filter: brightness(1.25);
     }
+}
+
+.tech__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+    grid-gap: 1em;
+    align-items: center;
+    justify-items: center;
+
+    .tech__grid__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25em;
+        text-align: center;
+
+        & i {
+            font-size: 2em;
+        }
+
+        & p {
+            font-size: 0.75em;
+            font-weight: 700;
+        }
+    }
+
 }
