@@ -103,6 +103,22 @@ cards.forEach((card, index) => {
     card.classList.add(contentArray[index])
     card.id = contentArray[index];
     if (card.innerHTML === "") card.innerHTML = `<h2>` + contentArray[index][0].toUpperCase() + contentArray[index].slice(1) + `</h2>`;
+
+    // When the user hovers over the card, move the background-image around to create a parallax effect
+    card.addEventListener("mousemove", e => {
+        const x = e.clientX / window.innerWidth,
+            y = e.clientY / window.innerHeight;
+
+        card.animate([
+            { backgroundPositionX: `${x * 100}%`, backgroundPositionY: `${y * 100}%` }
+        ], {
+            duration: .5,
+            fill: "forwards"
+        });
+
+
+    });
+
 });
 
 

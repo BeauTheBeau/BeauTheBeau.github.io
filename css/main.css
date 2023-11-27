@@ -59,10 +59,10 @@ main {
     border-radius: 1em;
     overflow: hidden;
     padding: 1em;
-    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.2s cubic-bezier(0.15, 0.8, 0.25, 1);
 
     background-size: 125% auto;
-    background-position: center;
+    background-position: 50% 50%;
 
     & h2 {
         background-color: white;
@@ -73,8 +73,11 @@ main {
     }
 
     &:hover, &:focus-within {
-        transform: scale(1.05);
-        background-size: 100% auto;
+        transform: scale(1.025);
+    }
+
+    &:active {
+        transform: scale(0.975);
     }
 
     :not(.card-letters) {
@@ -86,7 +89,7 @@ main {
 .profile {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://avatars.githubusercontent.com/u/90942493?v=4");
     background-size: 125% auto;
-    background-position: center;
+    background-position: 50% 50%;
 }
 
 .github, .discord, .time, .twitter {
