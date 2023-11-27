@@ -87,9 +87,8 @@ main {
 }
 
 .profile {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://avatars.githubusercontent.com/u/90942493?v=4");
     background-size: 125% auto;
-    background-position: 50% 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://avatars.githubusercontent.com/u/90942493?v=4") 50% 50%;
 }
 
 .github, .discord, .time, .twitter {
