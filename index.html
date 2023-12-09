@@ -274,6 +274,51 @@
             },
         });
 
+        // Give the active class to the section that is currently in view
+        const sections = document.querySelectorAll('section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    entry.target.classList.add('active');
+
+                    // Get the relevant link and add the active class to it
+                    const link = document.querySelector(`.header__section[href="#${entry.target.id}"]`);
+                    document.querySelectorAll('.header__section').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    link.classList.add('active');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+            section.setAttribute('tabindex', '0');
+
+            section.addEventListener('keydown', function (event) {
+                if (event.key === 'Tab' || event.keyCode === 9) {
+                    sections.forEach(sec => {
+                        sec.classList.remove('active');
+                    });
+
+                    // Get the current section and add the active class to it
+                    const currentSection = document.querySelector(`#${event.target.id}`);
+                    currentSection.classList.add('active');
+
+
+                }
+            });
+        });
+
     </script>
 
 </main>
