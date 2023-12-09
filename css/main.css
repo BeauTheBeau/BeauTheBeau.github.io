@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -56,7 +57,9 @@ main {
 
 .header {
 
-    max-height: calc(100vh - 2rem);
+    position: fixed;
+    top: 0;
+    height: calc(100vh - 2rem);
 
     margin: 1rem 0;
     border-radius: 1rem;
@@ -71,6 +74,7 @@ main {
     justify-content: space-between;
 
     .header__content {
+
         .header__title {
             font-size: 3rem;
             font-weight: 700;
@@ -81,10 +85,40 @@ main {
         .header__subtitle {
             font-size: 1.25rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             margin-top: 0.5rem;
             font-style: italic;
         }
+
+        .header__sections {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            flex-wrap: wrap;
+
+            .header__section {
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.5rem;
+                background-color: rgba(var(--secondary-colour), 0.5);
+                color: rgba(var(--text-colour), 1);
+                border: 1px solid rgba(var(--secondary-colour), 0);
+                transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+                &.active {
+                    background-color: rgba(var(--secondary-colour), 0.75);
+                    box-shadow: 0 0 1rem rgba(var(--secondary-colour), 0.5);
+                    transform: translateY(-0.25rem);
+                    border: 1px solid rgba(var(--secondary-colour), 1);
+                }
+
+            }
+
+        }
+
     }
 
     .header__links {
@@ -268,7 +302,6 @@ span.cool__text {
         border: 1px solid rgba(var(--secondary-colour), 0.5);
         color: rgba(var(--text-colour), 1);
         transition: 0.2s ease-in-out;
-
 
 
         &:hover {
