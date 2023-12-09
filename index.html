@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BeauTheBeau</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+
+<main>
+    <div class="header">
+
+        <div class="header__content">
+            <h1 class="header__title">BeauTheBeau</h1>
+            <h2 class="header__subtitle">Super cool front-end developer</h2>
+
+            <div class="header__sections">
+                <a href="#about" class="header__section">About</a>
+                <a href="#skills" class="header__section">Skills</a>
+                <a href="#projects" class="header__section">Projects</a>
+                <a href="#contact" class="header__section">Contact</a>
+            </div>
+        </div>
+
+        <div class="header__links">
+            <a href="https://github.com/beauthebeau" class="header__link" target="_blank"><i
+                    class="nf nf-md-github"></i></a>
+
+            <a href="https://discord.com/users/729567972070391848" class="header__link" target="_blank"><i
+                    class="nf nf-md-discord"></i></a>
+
+            <a href="https://matrix.to/#/@beauthebeau:beauthebeau.pro"
+               class="header__link" target="_blank"><i class="nf nf-md-matrix"></i></a>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <section id="about" class="active">
+
+            <h2><span class="heading__number">00.</span> About me</h2>
+
+            <p>
+                I'm a <span class="cool__text">super cool</span> front-end developer. I love to create beautiful,
+                responsive, and user-friendly websites.
+            </p>
+
+        </section>
+        <section id="skills">
+
+            <h2><span class="heading__number">01.</span> My skills</h2>
+            <p>Notable skills, languages, and frameworks I've learned and used.</p>
+
+            <div class="skill__graph">
+
+                <div class="skill__graph-bar">
+                    <div class="skill__bar-title"><i class="nf nf-md-language_html5"></i> HTML</div>
+                    <div class="skill__bar-bar">
+                        <div class="skill__bar-bar-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill__graph-bar">
+                    <div class="skill__bar-title"><i class="nf nf-md-language_css3"></i> CSS</div>
+                    <div class="skill__bar-bar">
+                        <div class="skill__bar-bar-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill__graph-bar">
+                    <div class="skill__bar-title"><i class="nf nf-md-language_javascript"></i> JavaScript</div>
+                    <div class="skill__bar-bar">
+                        <div class="skill__bar-bar-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill__graph-bar">
+                    <div class="skill__bar-title"><i class="nf nf-md-language_python"></i> Python</div>
+                    <div class="skill__bar-bar">
+                        <div class="skill__bar-bar-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill__graph-bar">
+                    <div class="skill__bar-title"><i class="nf nf-dev-mongodb"></i> MongoDB</div>
+                    <div class="skill__bar-bar">
+                        <div class="skill__bar-bar-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="skill__graph-bar">
+                    <div class="skill__bar-title"><i class="nf nf-md-api"></i> Express</div>
+                    <div class="skill__bar-bar">
+                        <div class="skill__bar-bar-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+        <section id="projects">
+
+            <h2><span class="heading__number">02.</span> My projects</h2>
+            <p>Some of my projects I've worked on.</p>
+
+            <article class="project">
+                <h3 class="project__title">BEE6</h3>
+                <p class="project__description">A versatile, feature-packed Discord bot designed to cater to your
+                    server's needs.</p>
+
+                <div class="project__tags">
+                    <span class="project__tag">JavaScript</span>
+                    <span class="project__tag">Node.js</span>
+                    <span class="project__tag">Discord.js</span>
+                    <span class="project__tag">MongoDB</span>
+                </div>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/BEE6-Web-Horizontal.png" alt="BEE6 Web Dashboard">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/BEE6-Web-Vertical.png" alt="BEE6 Web Dashboard">
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+                <div class="project__links">
+                    <a href="https://github.com/bee6-bot/bee6" class="project__link" target="_blank"><i
+                            class="nf nf-md-github"></i>Source code</a>
+                    <a href="https://bee6-bot.github.io" class="project__link" target="_blank"><i
+                            class="nf nf-md-link"></i>Website</a>
+                </div>
+
+            </article>
+            <article class="project">
+                <h3 class="project__title">YTDL Frontend</h3>
+                <p class="project__description">A simple, easy-to-use frontend for youtube-dl. Allows you to download
+                    videos and playlists from YouTube to the host machine, and then stream them wherever you want.</p>
+
+                <div class="project__tags">
+                    <span class="project__tag">JavaScript</span>
+                    <span class="project__tag">Node.js</span>
+                    <span class="project__tag">Express</span>
+                    <span class="project__tag">youtube-dl</span>
+                </div>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/ytdl-frontend.png" alt="BEE6 Web Dashboard">
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+                <div class="project__links">
+                    <a href="https://github.com/beauthebeau/yt-frontend" class="project__link" target="_blank"><i
+                            class="nf nf-md-github"></i>Source code</a>
+                    <a href="https://yt.beauthebeau.pro" class="project__link" target="_blank"><i
+                            class="nf nf-md-link"></i>Website</a>
+                </div>
+
+            </article>
+            <article class="project">
+                <h3 class="project__title">AmogOS Web</h3>
+                <p class="project__description">Website for AmogOS, <i>"The sus OS for sus computers"</i>.</p>
+
+                <div class="project__tags">
+                    <span class="project__tag">HTML</span>
+                    <span class="project__tag">CSS</span>
+                    <span class="project__tag">JavaScript</span>
+                </div>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/AmogOS.1.png" alt="BEE6 Web Dashboard">
+                            <img src="images/AmogOS.2.png" alt="BEE6 Web Dashboard">
+                            <img src="images/AmogOS.3.png" alt="BEE6 Web Dashboard">
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+                <div class="project__links">
+                    <a href="https://github.com/beauthebeau/yt-frontend" class="project__link" target="_blank"><i
+                            class="nf nf-md-github"></i>Source code</a>
+                    <a href="https://yt.beauthebeau.pro" class="project__link" target="_blank"><i
+                            class="nf nf-md-link"></i>Website</a>
+                </div>
+
+            </article>
+
+            <article class="project project--more">
+                <h3 class="project__title">More projects</h3>
+                <p class="project__description">You can find more of my projects on my <a
+                        href="https://github.com/beauthebeau">
+                    GitHub</a>.</p>
+            </article>
+
+
+        </section>
+        <section id="contact">
+
+            <h2><span class="heading__number">03.</span> Contact me</h2>
+            <p>If you'd like to contact me, you can do so at any of the links below.</p>
+
+            <div class="contact__links">
+                <a href="mailto:beau@beauthebeau.pro" class="contact__link"><i class="nf nf-md-mail"></i>
+                    beau@beauthebeau.pro</a>
+                <a href="mailto:beauthebeau@skiff.com" class="contact__link"><i class="nf nf-md-mail"></i>
+                    beauthebeau@skiff.com</a>
+
+                <a href="https://matrix.to/#/@beauthebeau:beauthebeau.pro"
+                   class="contact__link"><i class="nf nf-md-message"></i> @beauthebeau:matrix.org</a>
+                <a href="https://discord.com/users/729567972070391848" class="contact__link"><i
+                        class="nf nf-md-discord"></i> @beauthebeau</a>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+    <script defer>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    </script>
+
+</main>
+</body>
+</html>
